@@ -4,7 +4,7 @@
   "sources": {
     "v": {
       "type": "vector",
-      "url": "../../",
+      "url": "https://k96mz.github.io/20250121piedmontite/VectorTileServer",
       "attribution": "<a href=\"https://maps.gsi.go.jp/vector/\" target=\"_blank\">地理院地図Vector（仮称）</a>"
     }
   },
