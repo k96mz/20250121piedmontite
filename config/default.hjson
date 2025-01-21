@@ -1,0 +1,15 @@
+{
+ morganFormat: tiny
+ htdocsPath: htdocs
+ privkeyPath: ./（場所）/privkey.pem 
+ fullchainPath: ./（場所）/cert.pem
+ logDirPath: log
+ port: 3000
+ esriDir: esri
+ esri-tilemap-min:{
+   gsimaps-vector-experiment: 4
+ }
+ esri-tilemap-max:{
+  gsimaps-vector-experiment: 17
+ }
+}
