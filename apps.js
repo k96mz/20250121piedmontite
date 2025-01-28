@@ -45,17 +45,21 @@ app.use('/rest/services/VT', VTRouter);
 app.use('/rest/services/esriIF', esriIFRouter); //esri interface
 
 //for http
-app.listen(port, () => {
-  console.log(`Running at Port ${port} ...`);
-});
+// app.listen(port, () => {
+//   console.log(`Running at Port ${port} ...`);
+// });
 
-/* for https
-const fs = require('fs')
-const spdy = require('spdy') //for https
-const privkeyPath = config.get('privkeyPath') //for https
-const fullchainPath = config.get('fullchainPath') //for https
-spdy.createServer({
-  key: fs.readFileSync(privkeyPath),
-  cert: fs.readFileSync(fullchainPath)
-}, app).listen(port)
-*/
+// for https
+const fs = require('fs');
+const spdy = require('spdy'); //for https
+const privkeyPath = config.get('privkeyPath'); //for https
+const fullchainPath = config.get('fullchainPath'); //for https
+spdy
+  .createServer(
+    {
+      key: fs.readFileSync(privkeyPath),
+      cert: fs.readFileSync(fullchainPath),
+    },
+    app
+  )
+  .listen(port);
